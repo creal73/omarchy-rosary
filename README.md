@@ -11,7 +11,7 @@ A bar widget for [Omarchy](https://omarchy.org/) that guides you through the tra
   reference of each mystery.
 - Progress is saved: you pick up where you left off.
 
-Prayer texts are currently available in French.
+Prayer texts are available in French (`fr`) and Latin (`la`).
 
 ## Installation
 
@@ -38,7 +38,7 @@ To bind a key, add this command in `~/.config/hypr/bindings.lua`:
 
 | Key | Default | Purpose |
 |---|---|---|
-| `language` | `"fr"` | Language of the texts |
+| `language` | `"fr"` | Language of the texts: `fr` or `la` |
 | `showProgress` | `true` | Show "3/5 · 7/10" next to the cross |
 
 State is stored in `~/.local/state/omarchy/rosary.json`.

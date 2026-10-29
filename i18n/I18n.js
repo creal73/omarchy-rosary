@@ -1,10 +1,12 @@
 .pragma library
 .import "fr.js" as Fr
+.import "la.js" as La
 
 // Registry of available languages. Adding one is two lines: an .import above
 // and an entry below. Unknown codes fall back to French.
 var LOCALES = {
-  fr: Fr.LOCALE
+  fr: Fr.LOCALE,
+  la: La.LOCALE
 }
 
 var FALLBACK = "fr"
