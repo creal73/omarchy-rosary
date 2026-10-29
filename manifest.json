@@ -28,7 +28,7 @@
       {
         "key": "language",
         "type": "string",
-        "label": "Language (fr, la)"
+        "label": "Language (fr, la, en)"
       },
       {
         "key": "showProgress",

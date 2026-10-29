@@ -1,7 +1,7 @@
 // Run with: node test/rosary-test.js
 const assert = require("assert")
 const R = require("../Rosary.js")
-const locales = { fr: require("../i18n/fr.js"), la: require("../i18n/la.js") }
+const locales = { fr: require("../i18n/fr.js"), la: require("../i18n/la.js"), en: require("../i18n/en.js") }
 
 // 7 opening steps, 5 decades of 13, Salve and the closing sign.
 assert.strictEqual(R.STEPS.length, 7 + 5 * 13 + 2)

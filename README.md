@@ -11,7 +11,7 @@ A bar widget for [Omarchy](https://omarchy.org/) that guides you through the tra
   reference of each mystery.
 - Progress is saved: you pick up where you left off.
 
-Prayer texts are available in French (`fr`) and Latin (`la`).
+Prayer texts are available in French (`fr`), Latin (`la`) and English (`en`, traditional form).
 
 ## Installation
 
@@ -38,12 +38,13 @@ To bind a key, add this command in `~/.config/hypr/bindings.lua`:
 ## Settings
 
 Click the ⚙ icon in the panel header (or press `S`) to open the settings page. Use `↑` `↓` to pick a
-row, `Space` to change it and `←` `→` to switch languages. Choices are saved to the widget's entry in
+row, `Space` to change it (it opens the language list on the first row) and `←` `→` to switch
+languages directly. Choices are saved to the widget's entry in
 `~/.config/omarchy/shell.json`.
 
 | Key | Default | Purpose |
 |---|---|---|
-| `language` | `"fr"` | Language of the texts: `fr` or `la` |
+| `language` | `"fr"` | Language of the texts: `fr`, `la` or `en` |
 | `showProgress` | `true` | Show "3/5 · 7/10" next to the cross |
 | `showFruit` | `true` | Show the fruit of the mystery |
 | `showReference` | `true` | Show the Scripture reference |
@@ -53,6 +54,7 @@ They can also be changed from a terminal with `omarchy bar set`; the widget upda
 ```bash
 omarchy bar set io.github.creal73.rosary language la              # Latin
 omarchy bar set io.github.creal73.rosary language fr              # French
+omarchy bar set io.github.creal73.rosary language en              # English
 omarchy bar set io.github.creal73.rosary showProgress false --json
 ```
 

@@ -151,7 +151,7 @@ Panel {
   }
 
   function activateSetting(index) {
-    if (index === 0) cycleLanguage(1)
+    if (index === 0) languageDropdown.toggle()
     else toggleSetting(root.toggleKeys[index - 1])
   }
 
@@ -219,6 +219,8 @@ Panel {
     PanelKeyCatcher {
       id: keyCatcher
       anchors.fill: parent
+      // The open language list owns the keys until it closes.
+      blocked: languageDropdown.popupOpen
       onCloseRequested: root.page === "settings" ? root.togglePage() : root.close()
       onTabRequested: function(direction) { root.switchPanel(direction) }
       onActivateRequested: {
@@ -544,7 +546,7 @@ Panel {
 
           Item {
             width: parent.width
-            height: languageGroup.height
+            height: languageDropdown.height
 
             Text {
               anchors.left: parent.left
@@ -556,17 +558,19 @@ Panel {
               font.pixelSize: Style.font.subtitle
             }
 
-            ButtonGroup {
-              id: languageGroup
+            // A list rather than one button per language, so the row keeps
+            // its size as languages are added.
+            Dropdown {
+              id: languageDropdown
               anchors.right: parent.right
+              width: Style.space(170)
+              showLabel: false
               options: root.languageOptions
               value: String(root.setting("language", "fr"))
-              focusable: false
-              foreground: root.fg
               fontFamily: root.fontFamily
-              cursorIndex: root.settingsCursor === 0 ? I18n.codes().indexOf(value) : -1
+              hasCursor: root.settingsCursor === 0
               onChanged: function(v) { root.setSetting("language", v) }
-              onHovered: function(index, isHovered) { if (isHovered) root.settingsCursor = 0 }
+              onHovered: function(isHovered) { if (isHovered) root.settingsCursor = 0 }
             }
           }
 
