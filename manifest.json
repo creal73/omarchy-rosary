@@ -20,7 +20,9 @@
     "defaultSection": "right",
     "defaults": {
       "language": "fr",
-      "showProgress": true
+      "showProgress": true,
+      "showFruit": true,
+      "showReference": true
     },
     "schema": [
       {
@@ -32,6 +34,16 @@
         "key": "showProgress",
         "type": "bool",
         "label": "Show progress in the bar"
+      },
+      {
+        "key": "showFruit",
+        "type": "bool",
+        "label": "Show the fruit of the mystery"
+      },
+      {
+        "key": "showReference",
+        "type": "bool",
+        "label": "Show the Scripture reference"
       }
     ]
   }

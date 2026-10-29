@@ -15,8 +15,16 @@ var LOCALE = {
     opening: "Preces initiáles",
     closing: "Preces fináles",
     hailMaryCount: "Ave María %1/%2",
-    keys: "← → procédere · R ab inítio · Esc cláudere",
-    tooltipIdle: "Rosárium oráre"
+    keys: "← → procédere · R ab inítio · S optiónes · Esc cláudere",
+    tooltipIdle: "Rosárium oráre",
+    languageName: "Latína",
+    settings: "Optiónes",
+    back: "Ad oratiónem",
+    language: "Lingua",
+    showProgress: "Progréssus in tábula",
+    showFruit: "Fructus mystérii",
+    showReference: "Locus Scriptúræ",
+    settingsKeys: "↑ ↓ elígere · Spatium mutáre · S vel Esc redíre"
   },
 
   prayers: {

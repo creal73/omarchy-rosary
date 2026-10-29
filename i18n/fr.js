@@ -15,8 +15,16 @@ var LOCALE = {
     opening: "Prières d'ouverture",
     closing: "Prières de conclusion",
     hailMaryCount: "Je vous salue Marie %1/%2",
-    keys: "← → avancer · R recommencer · Échap fermer",
-    tooltipIdle: "Prier le chapelet"
+    keys: "← → avancer · R recommencer · S réglages · Échap fermer",
+    tooltipIdle: "Prier le chapelet",
+    languageName: "Français",
+    settings: "Réglages",
+    back: "Retour à la prière",
+    language: "Langue",
+    showProgress: "Progression dans la barre",
+    showFruit: "Fruit du mystère",
+    showReference: "Référence biblique",
+    settingsKeys: "↑ ↓ choisir · Espace changer · S ou Échap retour"
   },
 
   prayers: {

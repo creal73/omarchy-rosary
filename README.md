@@ -28,18 +28,41 @@ omarchy plugin add https://github.com/creal73/omarchy-rosary.git --enable
 | `→` `↓` `Space` `Enter` | Next prayer |
 | `←` `↑` | Previous prayer |
 | `R` | Start over |
-| `Esc` | Close |
+| `S` or the ⚙ icon | Open / leave the settings page |
+| `Esc` | Close (leaves the settings page first) |
 | Click on a bead or a decade | Jump to it |
 
 To bind a key, add this command in `~/.config/hypr/bindings.lua`:
 `omarchy-shell shell toggle io.github.creal73.rosary '{}'`.
 
-## Settings (`~/.config/omarchy/shell.json`)
+## Settings
+
+Click the ⚙ icon in the panel header (or press `S`) to open the settings page. Use `↑` `↓` to pick a
+row, `Space` to change it and `←` `→` to switch languages. Choices are saved to the widget's entry in
+`~/.config/omarchy/shell.json`.
 
 | Key | Default | Purpose |
 |---|---|---|
 | `language` | `"fr"` | Language of the texts: `fr` or `la` |
 | `showProgress` | `true` | Show "3/5 · 7/10" next to the cross |
+| `showFruit` | `true` | Show the fruit of the mystery |
+| `showReference` | `true` | Show the Scripture reference |
+
+They can also be changed from a terminal with `omarchy bar set`; the widget updates right away:
+
+```bash
+omarchy bar set io.github.creal73.rosary language la              # Latin
+omarchy bar set io.github.creal73.rosary language fr              # French
+omarchy bar set io.github.creal73.rosary showProgress false --json
+```
+
+Or edit the widget's entry in `~/.config/omarchy/shell.json`:
+
+```json
+{ "id": "io.github.creal73.rosary", "language": "la" }
+```
+
+An unknown language code falls back to French.
 
 State is stored in `~/.local/state/omarchy/rosary.json`.
 

@@ -11,6 +11,10 @@ var LOCALES = {
 
 var FALLBACK = "fr"
 
+function codes() {
+  return Object.keys(LOCALES)
+}
+
 function locale(code) {
   return LOCALES[String(code || "").toLowerCase()] || LOCALES[FALLBACK]
 }
