@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.creal73.rosary",
+  "name": "Rosary",
+  "version": "0.1.0",
+  "author": "creal73",
+  "license": "MIT",
+  "description": "Pray the traditional rosary from the bar: mysteries of the day, beads and prayer texts",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Rosary",
+    "description": "Pray the traditional rosary from the bar",
+    "category": "Info",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "language": "fr",
+      "showProgress": true
+    },
+    "schema": [
+      {
+        "key": "language",
+        "type": "string",
+        "label": "Language (fr)"
+      },
+      {
+        "key": "showProgress",
+        "type": "bool",
+        "label": "Show progress in the bar"
+      }
+    ]
+  }
+}
